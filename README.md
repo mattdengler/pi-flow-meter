@@ -1,54 +1,44 @@
-# Raspberry Pi + DIGITEN flow meter
+# Raspberry Pi + DIGITEN Flow Meter
 
-This is a Python 3 program for the DIGITEN (https://www.digiten.shop/collections/counter/products/digiten-g1-2-water-flow-hall-sensor-switch-flow-meter-1-30l-min) flow meter (or similar device) using interrupts.
+This is a Python 3 program for the DIGITEN flow meter (or similar device) using interrupts.
 
-Flow Meter Specs
-Frequency:
-F = 7.5 * Q (L / Min)
-F = Constant * units of flow (L / min) * time (seconds)
+## Device Details
 
-450 output pulses/liters
-error: ± 2%
-Flow range: 1-30L/min
-current can not exceed 10mA
-Maximum current: 15 mA(DC 5V)
-Working voltage range: DC 5-24 V
-Load capacity: ≤ 10 mA(DC 5V)
-Operating Temp: ≤ 80℃
-Operating humidity: 35%-90%RH
-Allow compression: Water pressure 1.75 Mpa below
-Insulation resistance: >100M OHM
-Storage Temperature: -25-80℃
-Storage humidity: 25%-95%RH
-Output Waveform: Square Wave, output pulse signal.
-ROHS Compliant.
-Sensor:Hall effect
-Cable length: 15cm.
+https://www.digiten.shop/collections/counter/products/digiten-g1-2-water-flow-hall-sensor-switch-flow-meter-1-30l-min<br>
 
-Packaging include:
-G1/2" Flowmeter x 1
+### Frequency Calculation:<br>
+F = 7.5 * Q (L / Min)<br>
+F = Constant * units of flow (L / min) * time (seconds)<br>
+450 output pulses/liters<br>
 
+### Deviec Specs:<br>
+450 output pulses/liters<br>
+error: ± 2%<br>
+Flow range: 1-30L/min<br>
+current can not exceed 10mA<br>
+Maximum current: 15 mA(DC 5V)<br>
+Working voltage range: DC 5-24 V<br>
+Load capacity: ≤ 10 mA (DC 5V)<br>
+Operating Temp: ≤ 80℃<br>
+Operating humidity: 35%-90%RH<br>
+Allow compression: Water pressure 1.75 Mpa below<br>
+Insulation resistance: >100M OHM<br>
+Storage Temperature: -25-80℃<br>
+Storage humidity: 25%-95%RH<br>
+Output Waveform: Square Wave, output pulse signal.<br>
+ROHS Compliant.<br>
+Sensor:Hall effect<br>
+Cable length: 15cm.<br>
 
+## IMPORTANT!<br>
+Input MUST go through voltage divider circuit!!!<br>
+Input -> 4.7k ohm resistor -> RPi pin 13 + 10k ohm resistor-> Gnd RPi & SR04<br>
 
-
-Input MUST go through voltage divider circuit!!!
-Input -> 4.7k ohm resistor -> RPi pin 13 + 10k ohm resistor-> Gnd RPi & SR04
-
-Referece:
-https://www.youtube.com/watch?v=wpenAP8gN3c
+Referece:<br>
+https://www.youtube.com/watch?v=wpenAP8gN3c<br>
 ![image](https://github.com/user-attachments/assets/b40440e6-357d-4685-9196-032503a52f99)
 
-
-Other points:
+## Other Important Points
 - A stopped impeller should not give false readings
 - I want an email alert when flow starts and stops
 - I want the stop email to tell me how much water passed
-
-
-Documentation from the flow meter manufacturer:
-Frequency:
-- F = 7.5 * Q (L / min)
-- F = Constant * units of flow (L / min) * time (seconds)
-- 450 output pulses/liters
-
- ![image](https://github.com/user-attachments/assets/218f624c-8fda-490f-9e78-54b206185ca0)
