@@ -1,4 +1,4 @@
-# flow-meter
+# pi-flow-meter
 Raspberry Pi + DIGITEN flow meter
 
 This is a Python 3 program for the DIGITEN (https://www.digiten.shop/collections/counter/products/digiten-g1-2-water-flow-hall-sensor-switch-flow-meter-1-30l-min) flow meter (or similar device) using interrupts.
