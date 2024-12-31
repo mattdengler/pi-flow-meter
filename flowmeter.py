@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# REPLACE SMTP SERVER AND EMAIL ADDRESS DETAILS BELOW
+
 # Notes
 #   Python 3 program for the YF-S201 flow meter (or similar device) using interrupts
 #   Input MUST go through voltage divider circuit!!!
@@ -55,12 +57,12 @@ flow_sensor = Button(pin=23, bounce_time=0.01)
 flow_sensor.when_activated = pulse_count
 
 # Email configuration variables
-smtp_server = 'smtp.mail.me.com'
+smtp_server = '[REPLACE WITH YOUR SMTP SERVER]'
 smtp_port = 587
-smtp_username = '[SMTP USERNAME HERE]'
-smtp_password = '[SMTP PASSWORD HERE]'
-from_address = 'Flow Meter <[FROM EMAIL ADDRESS HERE]>'
-destination_address = '[DESTINATION EMAIL HERE]'
+smtp_username = '[REPLACE WITH YOUR SMTP USERNAME]'
+smtp_password = '[REPLACE WITH YOUR SMTP PASSWORD]'
+from_address = 'Flow Meter <[REPLACE WITH YOUR FROM EMAIL ADDRESS]>'
+destination_address = '[REPLACE WITH YOUR DESTIATION EMAIL ADDRESS]'
 
 # Initialize variables
 rate_count = 0
